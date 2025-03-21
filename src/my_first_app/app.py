@@ -8,9 +8,8 @@ app = Flask(__name__)
 def index():
     return 'Hello world'
 
-
 @app.route('/<name>')
 def hello(name):
     return f'Hello {name}'
 
-app.run(port=8000)
+app.run(host='0.0.0.0' , port=8000 , debug=True)
