@@ -8,3 +8,8 @@ app = Flask(__name__)
 def index():
     return 'Hello world'
 
+
+@app.route('/<name>')
+def hello(name):
+    return f'Hello {name}'
+
