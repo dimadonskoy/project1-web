@@ -18,9 +18,8 @@ def check_file(file_name):
         with open(file_name) as file:
             data = file.readlines()
         return data
-    except FileNotFoundError:
-        return f'{file_name} not found'
-
+    except Exception as e:
+        return f'[!] Error: {e}'
 
 
 app.run(host='0.0.0.0' , port=8000 , debug=True)
