@@ -13,3 +13,4 @@ def index():
 def hello(name):
     return f'Hello {name}'
 
+app.run(port=8000)
